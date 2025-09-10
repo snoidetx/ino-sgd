@@ -7,5 +7,6 @@ def connect_to_(index=0):
     else:
         device = torch.device("cpu")
 
+    torch.cuda.set_device(device)
     print(f"Connected to {device}")
     return device
